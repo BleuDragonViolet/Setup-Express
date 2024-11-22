@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #0D0F3A, #2E3B4E);
+    color: #2E3B4E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .header {
+    width: 100%;
+    padding: 20px;
+    background-color: #0D0F3A;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #959EBD;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #959EBD;
+    background-color: #212543;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0D0F3A;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .download-card {
+    background: rgba(33, 37, 67, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .download-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .app-image {
+    width: 100%;
+    max-width: 150px; /* Largeur maximale fixe pour toutes les images */
+    height: 150px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Recadre l'image pour qu'elle occupe tout l'espace défini */
+    margin: 0 auto 10px auto;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  
+  .download-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #212543;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .download-button:hover {
+    background-color: #0D0F3A;
+  }
+
+  /* Conteneur pour les filtres avec fond flou */
+.filter-buttons {
+    background: rgba(33, 37, 67, 0.8); /* Fond semi-transparent */
+    backdrop-filter: blur(15px); /* Fond flou extrême */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espace entre les boutons */
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Style des boutons de filtre */
+  .filter-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #212543;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #0D0F3A;
+  }
+  
+  
+  
+  

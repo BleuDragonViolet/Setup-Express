@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup Express</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Setup Express</h1>
+    <nav class="nav">
+      <button onclick="navigateTo('index.html')">Accueil</button>
+      <button onclick="navigateTo('support.html')">Support</button>
+      <button onclick="navigateTo('information.html')">Information Supplémentaire</button>
+    </nav>
+  </header>
+  <div class="filter-buttons">
+    <button onclick="filterCards('all')">Tous</button>
+    <button onclick="filterCards('navigateur')">Navigateurs</button>
+    <button onclick="filterCards('Client')">Client</button>
+    <button onclick="filterCards('logiciels')">logiciels</button>
+    <button onclick="filterCards('Extensions')">Extensions</button>
+    <button onclick="filterCards('Rooms')">Rooms</button>
+  </div>
+  
+  <main class="content">
+    <div class="download-card"  data-category="navigateur" data-popular="yes">
+        <h2>Opéra GX</h2>
+        <img src="img/opera gx.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://net.geo.opera.com/opera/stable/windows?utm_tryagain=yes&utm_source=google&utm_medium=ose&utm_campaign=(none)&http_referrer=https%3A%2F%2Fwww.google.com%2F&utm_site=opera_com&&utm_lastpage=opera.com/download" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="navigateur">
+        <h2>Firefox</h2>
+        <img src="img/Firefox.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://download.mozilla.org/?product=firefox-stub&os=win&lang=fr" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="navigateur">
+        <h2>Google Chrome</h2>
+        <img src="img/Google Chrome.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://www.google.com/intl/fr_fr/chrome/" class="download-button" download>Télécharger</a>
+      </div>
+      
+      <div class="download-card" data-category="Client" data-popular="yes">
+        <h2>Epic Games</h2>
+        <img src="img/Epic games.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="Client"  data-popular="yes">
+        <h2>Steam</h2>
+        <img src="img/Steam.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://cdn.fastly.steamstatic.com/client/installer/SteamSetup.exe" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="Client"  data-popular="yes">
+        <h2>Battle.net</h2>
+        <img src="img/Battle Net.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://downloader.battle.net//download/getInstallerForGame?os=win&gameProgram=BATTLENET_APP&version=Live" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="Client"  data-popular="yes">
+        <h2>Valorant</h2>
+        <img src="img/Valorant.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://valorant.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.live.ap.exe" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="Client">
+        <h2>League of legends</h2>
+        <img src="img/League of legends.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://www.leagueoflegends.com/en-au/download/" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="Client"  data-popular="yes">
+        <h2>Xbox</h2>
+        <img src="img/Xbox.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://dlassets-ssl.xboxlive.com/public/content/XboxInstaller/XboxInstaller.exe" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="Extensions"  data-popular="yes">
+        <h2>BakkesMod</h2>
+        <img src="img/BakkesMod.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://github.com/bakkesmodorg/BakkesModInjectorCpp/releases/latest/download/BakkesModSetup.zip" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="Extensions">
+        <h2>Macro Gamer</h2>
+        <img src="img/macrogamer.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://www.itoady.com" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="Extensions">
+        <h2>Flame Auto Clicker</h2>
+        <img src="img/flame auto clicker.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://downloads.sourceforge.net/project/flame-auto-clicker/FAC%20Installer%20v1.6.1.exe?ts=gAAAAABnMouNg1kdDPE51UmBww7AeUIGgPxBoJ_fcr0cAsTORIvwbJPozosm4zMiHoe0Dct9mZgFxwjMC8y3X_Z-jybZthrypQ%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fflame-auto-clicker%2Ffiles%2Flatest%2Fdownload" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="logiciels">
+        <h2>HandBrake</h2>
+        <img src="img/HandBrake.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://github.com/HandBrake/HandBrake/releases/download/1.8.2/HandBrake-1.8.2-x86_64-Win_GUI.exe" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="logiciels">
+        <h2>JDownloader</h2>
+        <img src="img/JDownloader.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://jdownloader.org/jdownloader2" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="Client">
+        <h2>Netmarble</h2>
+        <img src="img/Netmarble.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://7dsgc.netmarble.com/fr/pcclient" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="logiciels">
+        <h2>Paint.NET</h2>
+        <img src="img/Paintnet.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://github.com/paintdotnet/release/releases/download/v5.0.13/paint.net.5.0.13.install.anycpu.web.zip" class="download-button" download>Télécharger</a>
+      </div>
+      
+      <div class="download-card" data-category="logiciels">
+        <h2>WinRAR</h2>
+        <img src="img/WinRAR.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701fr.exe" class="download-button" download>Télécharger</a>
+      </div>
+
+      <div class="download-card" data-category="logiciels">
+        <h2>Spotify</h2>
+        <img src="img/Spotify.png" alt="Aperçu de l'app" class="app-image">
+        <a href="https://download.scdn.co/SpotifySetup.exe" class="download-button" download>Télécharger</a>
+      </div>
+
+
+  <div class="download-card" data-category="logiciels">
+    <h2>Netflix</h2>
+    <img src="img/Netflix.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://apps.microsoft.com/store/detail/9WZDNCRFJ3TJ?launch=true&cid=Netflix-HelpCenter-MiniPDP&mode=mini" class="download-button" download>Télécharger</a>
+  </div>
+
+<div class="download-card" data-category="logiciels">
+    <h2>Rave</h2>
+    <img src="img/rave.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://app.rave-web.com/windows" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Client"  data-popular="yes">
+    <h2>EA</h2>
+    <img src="img/EA.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="logiciels" data-popular="yes">
+    <h2>discord</h2>
+    <img src="img/Discord.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="logiciels" data-popular="yes">
+    <h2>Visual Studio Code</h2>
+    <img src="img/Visual Studio Code.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Extensions">
+    <h2>Porofessor</h2>
+    <img src="img/Porofessor.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://download.overwolf.com/install/Download?PartnerId=3776&ExtensionId=pibhbkkgefgheeglaeemkkfjlhidhcedalapdggh&utm_source=porofessor-website&utm_medium=download-button&utm_campaign=download-button" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card"  data-category="Extensions">
+    <h2>Blitz</h2>
+    <img src="img/Blitz.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://blitz.gg/download/win" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Extensions">
+    <h2>3dmigoto</h2>
+    <img src="img/3dmigoto.png" alt="Aperçu de l'app" class="app-image">
+    <a href="src/Genshin Launcher mods.zip" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="logiciels">
+    <h2>Parsec</h2>
+    <img src="img/Parsec.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://builds.parsec.app/package/parsec-windows.exe" class="download-button" download>Télécharger</a>
+  </div>
+  
+  <div class="download-card" data-category="logiciels">
+    <h2>Voicemod</h2>
+    <img src="img/Voicemod.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://account.voicemod.net/#/account-activated-success?userId=3e123401-24b0-4bda-a82d-a7f3b81750f8&action=download" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Client">
+    <h2>Wargaming.net</h2>
+    <img src="img/Wargaming.net.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://redirect.wargaming.net/WGC/Wargaming_Game_Center_Install_WoT_EU.exe?_gl=1*t87t5r*_gcl_au*MTAzOTgzNTc3NC4xNzI2Mzk3MTI3*FPAU*MTAzOTgzNTc3NC4xNzI2Mzk3MTI3*_ga*MTUxNzk5NzI5OC4xNzI2Mzk3MTI3*_ga_BWRKLL4HR5*MTczMTQwNDIxMS4zLjEuMTczMTQwNDMyNy4wLjAuMTA5MzM1OTcwNw..*_fplc*bHJJRVZPQ3lTVzhNUGplNTc5OGp1UzBZOGJ0ZTBNRnR1TVFlcXJCbUJNZUI0aTRiU3haSnBOTjVZNVZEb01aekkyWm9ZbHVHZHYwc0xpRDBlRFhJT0lubk4zN3lZZ09zV2FXODd0S0VjRnlqd3JkT0RDd0w3NjJEd1JnaVpRJTNEJTNE&_ga=2.89845467.1543768815.1731404211-1517997298.1726397127" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Extensions">
+    <h2>Cheat Engine</h2>
+    <img src="img/Cheat Engine.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://d1ob1lqvot5kxa.cloudfront.net/installer/8710746/078702768321106" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="logiciels">
+    <h2>PokeMMO</h2>
+    <img src="img/PokeMMO.png" alt="Aperçu de l'app" class="app-image">
+    <a href="https://pokemmo.com/download_file/3/" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Extensions">
+    <h2>Serveur PV Genshin Impact</h2>
+    <img src="img/serveurpv.png" alt="Aperçu de l'app" class="app-image">
+    <a href="src/Serveur pv.zip" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Rooms">
+    <h2>Pokemon - Version Noire</h2>
+    <img src="img/Pokemon - Version Noire.png" alt="Aperçu de l'app" class="app-image">
+    <a href="src/Pokemon - Version Noire (France) (NDSi Enhanced)_apfix.nds" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Rooms">
+    <h2>Pokemon - Version Blanche</h2>
+    <img src="img/Pokemon - Version Blanche.png" alt="Aperçu de l'app" class="app-image">
+    <a href="src/Pokemon - Version Blanche (France) (NDSi Enhanced).nds" class="download-button" download>Télécharger</a>
+  </div>
+
+
+  <div class="download-card" data-category="Rooms">
+    <h2>Pokemon - Version Rouge Feu</h2>
+    <img src="img/Pokemon - Version Rouge Feu.png" alt="Aperçu de l'app" class="app-image">
+    <a href="src/Pokemon - Version Rouge Feu (FR).gba" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Rooms">
+    <h2>Pokemon - Version Emeraude</h2>
+    <img src="img/Pokemon - Version Emeraude.png" alt="Aperçu de l'app" class="app-image">
+    <a href="src/Pokemon - Version Emeraude (FR).gba" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Rooms">
+    <h2>Pokemon - Version Platine</h2>
+    <img src="img/Pokemon - Version Platine.png" alt="Aperçu de l'app" class="app-image">
+    <a href="src/Pokemon - Version Platine (France).nds" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Rooms">
+    <h2>Pokemon - Version Or HeartGold</h2>
+    <img src="img/Pokemon - Version Or HeartGold.png" alt="Aperçu de l'app" class="app-image">
+    <a href="src/Pokemon - Version Or HeartGold (France)_apfix.nds" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Rooms">
+    <h2>Pokemon - Version Argent SoulSilver</h2>
+    <img src="img/Pokemon - Version Argent SoulSilver.png" alt="Aperçu de l'app" class="app-image">
+    <a href="src/Pokemon - Version Argent SoulSilver (France)_apfix.nds" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Rooms">
+    <h2>Pack Pokémon Rooms</h2>
+    <img src="img/Pack Pokémon Rooms.png" alt="Aperçu de l'app" class="app-image">
+    <a href="src/Rooms Pokémon Tout.zip" class="download-button" download>Télécharger</a>
+  </div>
+
+  <div class="download-card" data-category="Rooms">
+    <h2>Suite Rooms</h2>
+    <img src="img/redirection.png" alt="Aperçu de l'app" class="app-image">
+    <a href="" class="download-button" download>Télécharger</a>
+  </div>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
